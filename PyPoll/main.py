@@ -36,3 +36,12 @@ with open(election_datacsv) as csvfile:
     for name in dic_names:
         dic_votes[name] = round((dic_names[name] / total_polls) * 100)
         print(str(name) + ": " + str(dic_votes[name]) + "% " + "(" + str(dic_names[name]) + ")")
+
+    # set variable to compare and define winner
+    highest=0
+    for name in dic_votes:
+        if highest < dic_votes[name]:
+            highest = dic_votes[name]
+            winner = name
+
+    print(winner)
