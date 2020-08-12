@@ -13,5 +13,11 @@ dic_votes={}
 # open and read input csv file
 with open(election_datacsv) as csvfile:
 
-    csvreader = csv.reader(csvfile, delimiter = "",")
+    csvreader = csv.reader(csvfile, delimiter = ",")
     header = next(csvreader)
+
+    # define number of votes
+    for row in csvreader:
+        polls.append(row)
+
+    print(str(len(polls)))
