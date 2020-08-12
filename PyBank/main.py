@@ -30,7 +30,7 @@ with open(budget_datacsv) as csvfile:
     max_decr = 0
     max_incr = 0
 
-    # loop to determine total amount change, average change and max/min values + month
+    # loop backwards to determine total amount change, average change and max/min values + month
     for i in range(months,1,-1): 
         dif_prof = int(profitlosses[i-1][1]) - int(profitlosses[i-2][1])
         # find greatest increase and decrease values and month
